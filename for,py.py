@@ -15,6 +15,6 @@ prom=suma/cant
 print("su promedio de notas es", round(prom, 1))
  
 if prom>=4:
-  print("aprovado")
+  print("pasó")
 else:
   print("no pasó")
