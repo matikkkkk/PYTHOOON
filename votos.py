@@ -35,14 +35,4 @@ elif broly>vegeta and broly>goku:
     print("ganó broly", broly, "votos")
 else:
     print("empataron")
-
-
-
-
-
-
-
-
-
-
-
+    
