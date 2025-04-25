@@ -8,9 +8,7 @@ for i in palabra.lower():
     print(cont, i )
     if i in "aeiou":
         vocales+=1
-    else:
-        cons+=1
-
+        
 print("la cantidad de caracteres son", cont)
 print("la cantidad de vocales son", vocales)
-print("la cantidad de cons son", cons)  
+  
