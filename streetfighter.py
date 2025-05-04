@@ -13,7 +13,7 @@ while hp1>0 and hp2>0:
         print("vida de ", j1, [hp1])
         print("/"*hp1)
         ataq=random.randint(3, 15)
-        print(ataq)
+        #print(ataq)esto era para ver si funcionaba el crit.
         crit=random.randint(1,4)
         if crit==2:
             ataq*=2
@@ -29,7 +29,7 @@ while hp1>0 and hp2>0:
         print("vida de ", j2, [hp2])
         print("/"*hp2)
         ataq=random.randint(1,15)
-        print(ataq)
+        #print(ataq)esto era para ver si funcionaba el crit.
         crit=random.randint(1, 4)
         if crit==2:
             ataq*=2
@@ -48,7 +48,5 @@ if hp1>hp2:
 else:
     print("ha ganado ", j2)
 
-
-        
 
     
