@@ -40,6 +40,7 @@ while GenteT<2: #se debe cambiar para que sean 500 pero esto es para probar
            print("Inscripción completada.")
            time.sleep(1)
            print("listo, sus resultados seran enviando al correo")
+           print("pase a pagar sus costos son ", costo)
     elif op==2:
                 print("Inscripción de matrimonio")
                 nom3 = input("Ingrese el primer nombre: ")
@@ -49,12 +50,14 @@ while GenteT<2: #se debe cambiar para que sean 500 pero esto es para probar
                 print("Matrimonio registrado.")
                 time.sleep(1)
                 print("listo, sus resultados seran enviando al correo")
+                print("pase a pagar sus costos son ", costo)
     elif op==3:
                 print("Inscripción de profesión")
                 prof = input("Ingrese su profesión: ")
                 print("su inscripcion esta a nombre de ", prof)
                 time.sleep(1)
                 print("listo, sus resultados seran enviando al correo")
+                print("pase a pagar sus costos son ", costo)
     elif op==4:
                 print("Cambio de nombre y apellidos")
                 nom5 = input("Ingrese su nuevo nombre (o el actual si no cambia): ")
@@ -62,6 +65,7 @@ while GenteT<2: #se debe cambiar para que sean 500 pero esto es para probar
                 print("Su nuevo nombre es ", nom5, apelli)
                 time.sleep(1)
                 print("listo, sus resultados seran enviando al correo")
+                print("pase a pagar sus costos son ", costo)
     elif op==5:
                 print("Cédula para extranjeros")
                 pasa = input("Ingrese número de pasaporte: ")
