@@ -14,82 +14,139 @@
 # tecleando “X”
 # Una vez realizado los pasos anteriores, debe mostrar el detalle del pedido contabilizando el total de productos y la
 # cantidad de cada uno de ellos y si aplica o no el descuento
-# ******************************
-# TOTAL PRODUCTOS:4
-# ******************************
-
-def bole():
-    print("INGRESANDO AL CARRITO...")     
-    print(f'''*****************************
-        TOTAL PRODUCTOS:{productostotal}
-        ***************************** ''')
-    print(f"precio total de los productos...: {total} ")
-import time
-def t():
-    time.sleep(1)
+#Subtotal por pagar: 
+#Descuento por código: 
+#TOTAL: )   
+otakur=0
+picar=0
 productostotal=0
 precio=0
+pulpove=0
+angui=0
+desc=0
 total=0
-codigo=""
-print("ingresando al delivery...")
-t()
-
 while True:
-    accion=int(input('''que quiere hacer
-                1.- Comprar
-                2.- Ver carrito
-                '''))
-    match accion:
+    opd=int(input('''ingresando a delivery de sushiblues
+                 1.- comprar
+                 2.- ver carrito
+                 3.- pagar        
+              '''))
+    match opd:
         case 1:
-            while True:
+           while True:
                 opc=int(input('''Delivery de sushi vende 4 tipos de sushi:
-                            1.- Pikachu roll $4500
-                            2.- Otaku roll $5000
-                            3.- Pulpo Venenoso Roll $5200
-                            4. Anguila Eléctrica Roll $4800
-                            5.- salir al menu
-                            '''))
+                                    1.- Pikachu roll $4500
+                                    2.- Otaku roll $5000
+                                    3.- Pulpo Venenoso Roll $5200
+                                    4. Anguila Eléctrica Roll $4800
+                                    5.- salir al menu'''))
                 match opc:
-                    case 1:
-                        print("usted lleva picachu rolls $4500 ")
-                        precio+=4500
-                        productostotal+=1
-                    case 2: 
-                        print("usted lleva Otaku Roll $5000")
-                        precio+=5000
-                        productostotal+=1
-                    case 3:
-                        print("usted lleva Pulpo Venenoso Roll $5200")
-                        precio+=5200 
-                        productostotal+=1
-                    case 4:
-                        print(" usted lleva Anguila Eléctrica Roll $4800")
-                        precio+=5000
-                        productostotal+=1
-                    case 5: 
-                        print("volviendo al menu")
-                        break    
+                        case 1:
+                                print("usted lleva picachu rolls $4500 ")
+                                precio+=4500
+                                productostotal+=1
+                                picar+=1
+                        case 2: 
+                                print("usted lleva Otaku Roll $5000")
+                                precio+=5000
+                                productostotal+=1
+                                otakur+=1
+                        case 3:
+                                print("usted lleva Pulpo Venenoso Roll $5200")
+                                precio+=5200 
+                                productostotal+=1
+                                pulpove+=1
+                        case 4:
+                                print(" usted lleva Anguila Eléctrica Roll $4800")
+                                precio+=4800
+                                productostotal+=1
+                                angui+=1
+                        case 5: 
+                                print("volviendo al menu")
+                                break
         case 2:
-                while codigo!="soy gay":
-                    cod=input("¿Tiene código de descuento? 1.- Sí 2.- No: ")
-                    if cod == "1":
-                        codigo = input("Ingrese su código de descuento: ")
-                    if codigo =="soygay":
-                       print("Descuento aplicado de 10%.")
-                       descuento = precio * 0.1  
-                       total = precio - descuento  
-                       bole()
-                       break
-                    else:
-                        print("codigo no valido")
-                        nu=input("desea intentar nuevamente?. 1.- si 2.- no")
-                        if nu!="1":
-                            total=precio
-                            bole()
+                print(f'''      ******************************
+                                TOTAL PRODUCTOS:{productostotal}
+                                ******************************
+                                Pikachu Roll : {picar}
+                                Otaku Roll : {otakur}
+                                Pulpo Venenoso Roll: {pulpove}
+                                Anguila Eléctrica Roll:{angui}
+                                ****************************** 
+                        ''')
+
+                op=int(input("Presione 0 para volver al menu"))
+                if op==0:
+                    continue
+        case 3:
+            cod=int(input("usted tiene codigo de desc?: 1.- si 2.- no")) 
+            if cod==1:
+                  while True:
+                        codigo=input("ingrese codigo de desc/ para salir aprete s ")
+                        if codigo=="soygay":
+                            print("codigo de desc aplicado de 10%")
+                            desc=precio*0.1
+                            total=precio-desc
+                            print(f'''  ******************************
+                                        TOTAL PRODUCTOS:{productostotal}
+                                        ******************************
+                                        Pikachu Roll : {picar}
+                                        Otaku Roll : {otakur}
+                                        Pulpo Venenoso Roll: {pulpove}
+                                        Anguila Eléctrica Roll:{angui}
+                                        ****************************** 
+                                        Subtotal por pagar: {precio}
+                                        Descuento por código:{desc} 
+                                        TOTAL: {total}   
+                                            ''')
                             break
-                break
- 
-    
+                        elif codigo=="s":
+                            print("no se aplico ningun desc")
+                            total=precio
+                            desc=0
+                            print(f'''TOTAL PRODUCTOS:{productostotal}
+                            ******************************
+                            Pikachu Roll : {picar}
+                            Otaku Roll : {otakur}
+                             Pulpo Venenoso Roll: {pulpove}
+                            Anguila Eléctrica Roll:{angui}
+                            ****************************** 
+                            Subtotal por pagar: {precio}
+                            Descuento por código:{desc} 
+                            TOTAL: {total}
+''')
+                            break
+                        else:
+                            print("cod invalido, intente nuevamente si quiere salir aprete s")
+            else:
+                  desc=0
+                  total=precio
+                  print(f'''******************************
+                            TOTAL PRODUCTOS:{productostotal}
+                            ******************************
+                            Pikachu Roll : {picar}
+                            Otaku Roll : {otakur}
+                             Pulpo Venenoso Roll: {pulpove}
+                            Anguila Eléctrica Roll:{angui}
+                            ****************************** 
+                            Subtotal por pagar: {precio}
+                            Descuento por código:{desc} 
+                            TOTAL: {total}
+                                        ''')
+                  break
+                               
+                
+                              
+                              
+                              
+                              
+
+                            
+
+                              
+
+                
+              
 
                           
 
