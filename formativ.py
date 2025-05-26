@@ -113,8 +113,7 @@ while True:
                             ****************************** 
                             Subtotal por pagar: {precio}
                             Descuento por código:{desc} 
-                            TOTAL: {total}
-''')
+                            TOTAL: {total}''')
                             break
                         else:
                             print("cod invalido, intente nuevamente si quiere salir aprete s")

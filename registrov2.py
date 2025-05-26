@@ -50,22 +50,14 @@ def iniciar():
             else:
                 print("Usuario o contraseña incorrectos")
                 break     
-
-
-
-
-
-
 def realizarllamada():
     while True:
         numero = input("Ingrese número de celular ej: 912345678: ")
         if numero[0] == "9":
-            print(f"Llamando al número {numero}...\n")
+            print(f"Llamando al número {numero}")
             break
         else:
-            print("Número inválido. Debe comenzar con 9 y tener 9 dígitos")
-            
-
+            print("Número inválido. Debe comenzar con 9")
 def enviarcorreo():
     while True:
         correo = input("Ingrese correo electrónico: ")
@@ -75,9 +67,8 @@ def enviarcorreo():
             print("Correo inválido. Debe contener '@'.\n")
     
     mensaje = input("Ingrese el mensaje a enviar: ")
-    print(f"\nCorreo enviado a: {correo}")
-    print(f"Mensaje: {mensaje}\n")
-
+    print(f"Correo enviado a: {correo}")
+    print(f"Mensaje: {mensaje}")
 def menu_secundario():
     while True:
         print("menú de usuario ")
