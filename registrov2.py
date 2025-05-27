@@ -36,16 +36,16 @@ def iniciar():
             contrasena=input("ingrese contrasena")
             if usuario==usuario1 and contrasena==contrasena1:
                  print("inicio de sesion exitoso")
-                 menu_secundario()
+                 menusecundario()
                  break
             elif(usuario == usuario2 and contrasena == contrasena2):
                   print("inicio de sesion exitoso")
-                  menu_secundario()
+                  menusecundario()
                   break
                   
             elif(usuario == usuario3 and contrasena == contrasena3):
                  print("inicio de sesion exitoso")
-                 menu_secundario()
+                 menusecundario()
                  break
             else:
                 print("Usuario o contraseña incorrectos")
@@ -61,15 +61,15 @@ def realizarllamada():
 def enviarcorreo():
     while True:
         correo = input("Ingrese correo electrónico: ")
-        if '@' in correo:
+        if "@" in correo:
             break
         else:
-            print("Correo inválido. Debe contener '@'.\n")
+            print("Correo inválido. Debe contener '@'.")
     
     mensaje = input("Ingrese el mensaje a enviar: ")
     print(f"Correo enviado a: {correo}")
     print(f"Mensaje: {mensaje}")
-def menu_secundario():
+def menusecundario():
     while True:
         print("menú de usuario ")
         print("1) Realizar llamada")
@@ -104,6 +104,6 @@ def menu():
                     break
                 case _:
                     print("opcion no valida intente denuevo")
-        except Exception as error:
+        except ValueError as error:
             print(f"intente denuevo error:{error} ")           
 menu()

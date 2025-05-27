@@ -18,7 +18,7 @@ def pagotarjeta():
                 print(f"PAGO EXITOSO SU  SALDO ES DE {saldo} ")
                 break
         except ValueError as er:
-            print(f"ingrese el numero correctamente error : {er} ")
+            print(f"ingrese un numero .Error : {er} ")
 def compras():
     global compra, saldo
     while True:
@@ -36,7 +36,7 @@ def compras():
             else:
                 print("el monto de la compra debe ser mayor o igual a 0. intente denuevo")
         except ValueError as er:
-            print(f"ingrese el numero correctamente error : {er} ")           
+            print(f"ingrese un numero error : {er} ")           
 def menutar():
     while True:
         try:
