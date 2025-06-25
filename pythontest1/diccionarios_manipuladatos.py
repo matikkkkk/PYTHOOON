@@ -75,5 +75,4 @@ while True:
               print("saliendo")
               break  
         case _:
-              print("ingrese opcion valida")    
-
+              print("ingrese opcion valida")

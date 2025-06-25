@@ -51,4 +51,4 @@ def calcu():
                     print("opcion invalida")
         except ValueError as mati:
             print("error:", mati)
-
+calcu()
