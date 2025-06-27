@@ -1,11 +1,7 @@
 estudiantes={
-    1: {
-            "nombre": "ricardo",
-            "edad" : 18,
-            "curso" : "cuarto medio",
-            "promedio": 6.3 
-            }
+
 }
+
 while True:
     opc=int(input("""
     1.- Ingresar 
@@ -19,8 +15,11 @@ while True:
             edad=int(input("ingresa edad"))
             curso=(input("ingresa curso"))
             prome=float(input("ingresa promedio"))
-            largo=list(estudiantes.keys())[-1]
-            estudiantes[largo+1]={
+            if estudiantes:
+                largo=max(estudiantes.keys())+1
+            else:
+                largo=1
+            estudiantes[largo]={
             "nombre": nom,
             "edad" : edad,
             "curso" : curso,
@@ -32,3 +31,10 @@ while True:
         case 3:
             for k, v in estudiantes.items():
                 print(k, v)
+
+    # 1: {
+    #         "nombre": "ricardo",
+    #         "edad" : 18,
+    #         "curso" : "cuarto medio",
+    #         "promedio": 6.3 
+    #         }
